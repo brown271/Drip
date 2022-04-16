@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="User" representedClassName=".UserMO" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="user" optional="YES" attributeType="String"/>
+        <attribute name="waterGoal" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="weightUnit" optional="YES" attributeType="String"/>
+        <relationship name="userToRecord" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WaterRecord" inverseName="recordToUser" inverseEntity="WaterRecord"/>
+    </entity>
+    <entity name="WaterRecord" representedClassName=".WaterRecordMO" syncable="YES">
+        <attribute name="currentWater" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="recordToUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="userToRecord" inverseEntity="User"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="-27" positionY="18" width="128" height="133"/>
+        <element name="WaterRecord" positionX="345" positionY="45" width="128" height="88"/>
+    </elements>
+</model>

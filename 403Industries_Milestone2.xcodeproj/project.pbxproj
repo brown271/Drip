@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273F7C26280B56DF00AD955B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C24280B56DF00AD955B /* Model.xcdatamodeld */; };
+		273F7C2B280B5DA900AD955B /* WaterRecordMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C27280B5DA900AD955B /* WaterRecordMO+CoreDataClass.swift */; };
+		273F7C2C280B5DA900AD955B /* WaterRecordMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C28280B5DA900AD955B /* WaterRecordMO+CoreDataProperties.swift */; };
+		273F7C2D280B5DA900AD955B /* UserMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C29280B5DA900AD955B /* UserMO+CoreDataClass.swift */; };
+		273F7C2E280B5DA900AD955B /* UserMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C2A280B5DA900AD955B /* UserMO+CoreDataProperties.swift */; };
 		4DA987D227E7C8C300496901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D127E7C8C300496901 /* AppDelegate.swift */; };
 		4DA987D427E7C8C300496901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D327E7C8C300496901 /* SceneDelegate.swift */; };
 		4DA987D627E7C8C300496901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D527E7C8C300496901 /* ViewController.swift */; };
 		4DA987D927E7C8C300496901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA987D727E7C8C300496901 /* Main.storyboard */; };
 		4DA987DB27E7C8C400496901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA987DA27E7C8C400496901 /* Assets.xcassets */; };
 		4DA987DE27E7C8C400496901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA987DC27E7C8C400496901 /* LaunchScreen.storyboard */; };
+		4DA987E727E7D61C00496901 /* Nirmala.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DA987E627E7D61900496901 /* Nirmala.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		273F7C25280B56DF00AD955B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		273F7C27280B5DA900AD955B /* WaterRecordMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterRecordMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		273F7C28280B5DA900AD955B /* WaterRecordMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterRecordMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		273F7C29280B5DA900AD955B /* UserMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		273F7C2A280B5DA900AD955B /* UserMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4DA987CE27E7C8C300496901 /* 403Industries_Milestone2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 403Industries_Milestone2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA987D127E7C8C300496901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA987D327E7C8C300496901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,7 @@
 		4DA987DA27E7C8C400496901 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA987DD27E7C8C400496901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA987DF27E7C8C400496901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA987E627E7D61900496901 /* Nirmala.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nirmala.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +52,10 @@
 		4DA987C527E7C8C300496901 = {
 			isa = PBXGroup;
 			children = (
+				273F7C27280B5DA900AD955B /* WaterRecordMO+CoreDataClass.swift */,
+				273F7C28280B5DA900AD955B /* WaterRecordMO+CoreDataProperties.swift */,
+				273F7C29280B5DA900AD955B /* UserMO+CoreDataClass.swift */,
+				273F7C2A280B5DA900AD955B /* UserMO+CoreDataProperties.swift */,
 				4DA987D027E7C8C300496901 /* 403Industries_Milestone2 */,
 				4DA987CF27E7C8C300496901 /* Products */,
 			);
@@ -63,8 +79,18 @@
 				4DA987DA27E7C8C400496901 /* Assets.xcassets */,
 				4DA987DC27E7C8C400496901 /* LaunchScreen.storyboard */,
 				4DA987DF27E7C8C400496901 /* Info.plist */,
+				4DA987E527E7D5F900496901 /* fonts */,
+				273F7C24280B56DF00AD955B /* Model.xcdatamodeld */,
 			);
 			path = 403Industries_Milestone2;
+			sourceTree = "<group>";
+		};
+		4DA987E527E7D5F900496901 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4DA987E627E7D61900496901 /* Nirmala.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +154,7 @@
 				4DA987DE27E7C8C400496901 /* LaunchScreen.storyboard in Resources */,
 				4DA987DB27E7C8C400496901 /* Assets.xcassets in Resources */,
 				4DA987D927E7C8C300496901 /* Main.storyboard in Resources */,
+				4DA987E727E7D61C00496901 /* Nirmala.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273F7C2E280B5DA900AD955B /* UserMO+CoreDataProperties.swift in Sources */,
+				273F7C2B280B5DA900AD955B /* WaterRecordMO+CoreDataClass.swift in Sources */,
 				4DA987D627E7C8C300496901 /* ViewController.swift in Sources */,
+				273F7C2C280B5DA900AD955B /* WaterRecordMO+CoreDataProperties.swift in Sources */,
 				4DA987D227E7C8C300496901 /* AppDelegate.swift in Sources */,
 				4DA987D427E7C8C300496901 /* SceneDelegate.swift in Sources */,
+				273F7C2D280B5DA900AD955B /* UserMO+CoreDataClass.swift in Sources */,
+				273F7C26280B56DF00AD955B /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +392,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		273F7C24280B56DF00AD955B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				273F7C25280B56DF00AD955B /* Model.xcdatamodel */,
+			);
+			currentVersion = 273F7C25280B56DF00AD955B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4DA987C627E7C8C300496901 /* Project object */;
 }
