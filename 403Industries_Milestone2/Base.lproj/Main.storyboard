@@ -36,20 +36,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaL-sO-8h6">
-                                <rect key="frame" x="11" y="601" width="369" height="109"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaL-sO-8h6">
+                                <rect key="frame" x="11" y="601" width="369" height="79"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="getStartedBlue"/>
                                 <connections>
-                                    <segue destination="cMp-G6-dvI" kind="presentation" modalPresentationStyle="fullScreen" id="8oW-Fr-Rer"/>
+                                    <action selector="checkData" destination="BYZ-38-t0r" eventType="touchUpInside" id="VxV-6s-nqC"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medDriplet" id="80O-FE-y4g">
                                 <rect key="frame" x="163" y="270" width="136" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKd-h0-upn">
-                                <rect key="frame" x="11" y="674" width="369" height="109"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKd-h0-upn">
+                                <rect key="frame" x="11" y="688" width="369" height="95"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="cancelBlue"/>
                             </button>
@@ -68,15 +68,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="avU-So-kyj"/>
+                    <connections>
+                        <outlet property="cancelBtn" destination="XKd-h0-upn" id="oBL-W2-Y1Y"/>
+                        <outlet property="continueBtn" destination="QaL-sO-8h6" id="kIN-VW-ZXe"/>
+                        <segue destination="cMp-G6-dvI" kind="presentation" identifier="setup" modalPresentationStyle="fullScreen" id="8b1-wF-dGj"/>
+                        <segue destination="nRX-O5-yrY" kind="presentation" identifier="skipSetup" modalPresentationStyle="fullScreen" id="uwC-2g-ckF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="936.92307692307691" y="68.957345971563981"/>
         </scene>
-        <!--View Controller-->
+        <!--Setup View Controller-->
         <scene sceneID="rvM-fX-zer">
             <objects>
-                <viewController id="cMp-G6-dvI" sceneMemberID="viewController">
+                <viewController id="cMp-G6-dvI" customClass="setupViewController" customModule="_03Industries_Milestone2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fd6-73-7nE">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +153,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="in1-xJ-Bpp"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="in1-xJ-Bpp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pI-Bi-I1x">
@@ -1374,10 +1380,10 @@
             </objects>
             <point key="canvasLocation" x="3026.1538461538462" y="786.25592417061603"/>
         </scene>
-        <!--View Controller-->
+        <!--Base View Controller-->
         <scene sceneID="IPp-F6-e04">
             <objects>
-                <viewController id="nRX-O5-yrY" sceneMemberID="viewController">
+                <viewController id="nRX-O5-yrY" customClass="baseViewController" customModule="_03Industries_Milestone2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RSb-2J-I5k">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1712,11 +1718,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RJf-Bh-rfB"/>
+        <segue reference="uwC-2g-ckF"/>
         <segue reference="tep-WD-2X5"/>
-        <segue reference="NBA-xP-VhT"/>
-        <segue reference="Amv-cV-0ko"/>
-        <segue reference="in1-xJ-Bpp"/>
+        <segue reference="WmF-Ri-d27"/>
+        <segue reference="8b1-wF-dGj"/>
+        <segue reference="jfh-zi-led"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="403" width="274" height="279"/>

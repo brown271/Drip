@@ -12,6 +12,8 @@
 		273F7C2C280B5DA900AD955B /* WaterRecordMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C28280B5DA900AD955B /* WaterRecordMO+CoreDataProperties.swift */; };
 		273F7C2D280B5DA900AD955B /* UserMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C29280B5DA900AD955B /* UserMO+CoreDataClass.swift */; };
 		273F7C2E280B5DA900AD955B /* UserMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C2A280B5DA900AD955B /* UserMO+CoreDataProperties.swift */; };
+		273F7C30280BBE8E00AD955B /* setupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C2F280BBE8E00AD955B /* setupViewController.swift */; };
+		273F7C32280BBE9E00AD955B /* baseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C31280BBE9E00AD955B /* baseViewController.swift */; };
 		4DA987D227E7C8C300496901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D127E7C8C300496901 /* AppDelegate.swift */; };
 		4DA987D427E7C8C300496901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D327E7C8C300496901 /* SceneDelegate.swift */; };
 		4DA987D627E7C8C300496901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D527E7C8C300496901 /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 		273F7C28280B5DA900AD955B /* WaterRecordMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterRecordMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		273F7C29280B5DA900AD955B /* UserMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		273F7C2A280B5DA900AD955B /* UserMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		273F7C2F280BBE8E00AD955B /* setupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setupViewController.swift; sourceTree = "<group>"; };
+		273F7C31280BBE9E00AD955B /* baseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseViewController.swift; sourceTree = "<group>"; };
 		4DA987CE27E7C8C300496901 /* 403Industries_Milestone2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 403Industries_Milestone2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA987D127E7C8C300496901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA987D327E7C8C300496901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 		4DA987C527E7C8C300496901 = {
 			isa = PBXGroup;
 			children = (
+				273F7C31280BBE9E00AD955B /* baseViewController.swift */,
+				273F7C2F280BBE8E00AD955B /* setupViewController.swift */,
 				273F7C27280B5DA900AD955B /* WaterRecordMO+CoreDataClass.swift */,
 				273F7C28280B5DA900AD955B /* WaterRecordMO+CoreDataProperties.swift */,
 				273F7C29280B5DA900AD955B /* UserMO+CoreDataClass.swift */,
@@ -168,9 +174,11 @@
 				273F7C2E280B5DA900AD955B /* UserMO+CoreDataProperties.swift in Sources */,
 				273F7C2B280B5DA900AD955B /* WaterRecordMO+CoreDataClass.swift in Sources */,
 				4DA987D627E7C8C300496901 /* ViewController.swift in Sources */,
+				273F7C32280BBE9E00AD955B /* baseViewController.swift in Sources */,
 				273F7C2C280B5DA900AD955B /* WaterRecordMO+CoreDataProperties.swift in Sources */,
 				4DA987D227E7C8C300496901 /* AppDelegate.swift in Sources */,
 				4DA987D427E7C8C300496901 /* SceneDelegate.swift in Sources */,
+				273F7C30280BBE8E00AD955B /* setupViewController.swift in Sources */,
 				273F7C2D280B5DA900AD955B /* UserMO+CoreDataClass.swift in Sources */,
 				273F7C26280B56DF00AD955B /* Model.xcdatamodeld in Sources */,
 			);
