@@ -20,7 +20,7 @@ extension UserMO {
     @NSManaged public var height: Float
     @NSManaged public var weightUnit: String?
     @NSManaged public var user: String?
-    @NSManaged public var waterGoal: Int32
+    @NSManaged public var waterGoal: Decimal
     @NSManaged public var userToRecord: NSSet?
 
 }

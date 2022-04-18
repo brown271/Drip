@@ -21,6 +21,18 @@ class ViewController: UIViewController {
         
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         managedContext = appDelegate?.persistentContainer.viewContext
+        
+        let fetch : NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "User")
+        
+        
+        let delete = NSBatchDeleteRequest(fetchRequest: fetch)
+        
+        do{
+            try managedContext.execute(delete)
+            print ("data wiped")
+        }catch let error as NSError{
+            print("yikes!, \(error)")
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -34,6 +46,19 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func addData(){
+        print("new data added")
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
+      let newUser = UserMO(entity: entity, insertInto: managedContext)
+        newUser.height = 5
+        newUser.waterGoal = 8
+        newUser.user = "alex"
+        newUser.weight = 5
+            try!  managedContext.save()
+      
+      
+    }
+    
     func isUserSetup() -> Bool {
         
         let fetch: NSFetchRequest<UserMO> = UserMO.fetchRequest()
@@ -41,6 +66,7 @@ class ViewController: UIViewController {
         fetch.predicate = NSPredicate(format: "user != nil")
         
         let count = (try? managedContext.count(for: fetch)) ?? 0
+        print(count)
     
         //if there are entities with searchKey's, return
         if count > 0 {

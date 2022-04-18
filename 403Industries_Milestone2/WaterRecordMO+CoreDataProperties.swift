@@ -17,7 +17,7 @@ extension WaterRecordMO {
     }
 
     @NSManaged public var date: Date?
-    @NSManaged public var currentWater: Int32
+    @NSManaged public var currentWater: Decimal
     @NSManaged public var recordToUser: UserMO?
 
 }
