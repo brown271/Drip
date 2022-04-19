@@ -389,7 +389,7 @@
         <!--View Controller-->
         <scene sceneID="rp9-06-Mz0">
             <objects>
-                <viewController id="LBo-Ee-4WA" sceneMemberID="viewController">
+                <viewController id="LBo-Ee-4WA" customClass="HBViewController" customModule="_03Industries_Milestone2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L2u-xa-kBE">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -503,6 +503,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="goal"/>
+                                <connections>
+                                    <action selector="randomize" destination="LBo-Ee-4WA" eventType="touchUpInside" id="Vbt-aZ-gfE"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medDriplet" translatesAutoresizingMaskIntoConstraints="NO" id="HS4-Pn-5CQ">
                                 <rect key="frame" x="277" y="145" width="35" height="28"/>
@@ -565,10 +568,16 @@
                             <constraint firstItem="t3K-5H-2TY" firstAttribute="trailing" secondItem="ouo-jP-rV8" secondAttribute="trailing" id="zJD-Xu-uG8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="botHeader" destination="wvn-mx-3WX" id="dHx-iV-F04"/>
+                        <outlet property="botInfo" destination="ouo-jP-rV8" id="UhC-Mc-SHH"/>
+                        <outlet property="topHeader" destination="sRR-Mj-wzG" id="T2j-PX-34F"/>
+                        <outlet property="topInfo" destination="t3K-5H-2TY" id="jbb-iN-e2l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNM-Ca-GUd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2192.3076923076924" y="1479.3838862559242"/>
+            <point key="canvasLocation" x="2226" y="1479"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6jo-ER-EJZ">
@@ -1564,7 +1573,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CAL-yJ-BuN"/>
+        <segue reference="rfq-2f-g8T"/>
         <segue reference="WmF-Ri-d27"/>
         <segue reference="Amv-cV-0ko"/>
         <segue reference="in1-xJ-Bpp"/>
