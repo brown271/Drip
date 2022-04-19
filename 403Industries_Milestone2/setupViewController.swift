@@ -6,20 +6,35 @@
 //
 
 import UIKit
+import CoreData
 
 class setupViewController: UIViewController {
+    
+    @IBOutlet var cupDisplay: UILabel!
+    
+    var managedContext: NSManagedObjectContext!
+    var num: Decimal = 8.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        managedContext = appDelegate?.persistentContainer.viewContext
         // Do any additional setup after loading the view.
     }
     
 
-    @IBOutlet var cupDisplay: UILabel!
+    
     
     @IBAction func setGoal(){
-        
+        print("new data added")
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
+      let newUser = UserMO(entity: entity, insertInto: managedContext)
+        newUser.age = 25.0 as NSDecimalNumber
+        newUser.waterGoal = num as NSDecimalNumber
+        newUser.user = "user"
+        newUser.weight = 160.0 as NSDecimalNumber
+            try!  managedContext.save()
+        performSegue(withIdentifier: "setupToMain", sender: nil)
     }
     
     @IBAction func calculate(){
@@ -28,12 +43,13 @@ class setupViewController: UIViewController {
     
     @IBAction func increase(){
         var canIncrease = true;
-        let num = Decimal(string: cupDisplay.text!)!
+       
         if (num >= 15){
             canIncrease = false;
         }
         if (canIncrease){
-            cupDisplay.text = "\(num + 0.5)"
+            num += 0.5
+            cupDisplay.text = "\(num)"
         }
         else{
             let alert = UIAlertController(title: "Error", message: "Cant have more than 15 cups per day!", preferredStyle: UIAlertController.Style.alert)
@@ -43,12 +59,12 @@ class setupViewController: UIViewController {
     }
     @IBAction func decrease(){
         var canDecrease = true;
-        let num = Decimal(string: cupDisplay.text!)!
         if (num <= 1){
             canDecrease = false;
         }
         if (canDecrease){
-            cupDisplay.text = "\(num - 0.5)"
+            num -= 0.5
+            cupDisplay.text = "\(num)"
         }
         else{
             let alert = UIAlertController(title: "Error", message: "Cant have less than 1 cups per day!", preferredStyle: UIAlertController.Style.alert)

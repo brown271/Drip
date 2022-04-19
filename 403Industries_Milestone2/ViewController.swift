@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         print("new data added")
         let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
       let newUser = UserMO(entity: entity, insertInto: managedContext)
-        newUser.height = 5
+        newUser.age = 5
         newUser.waterGoal = 8
         newUser.user = "alex"
         newUser.weight = 5
