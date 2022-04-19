@@ -44,11 +44,11 @@ class setupViewController: UIViewController {
     @IBAction func increase(){
         var canIncrease = true;
        
-        if (num >= 15){
+        if (num >= 16){
             canIncrease = false;
         }
         if (canIncrease){
-            num += 0.5
+            num += 1
             cupDisplay.text = "\(num)"
         }
         else{
@@ -63,7 +63,7 @@ class setupViewController: UIViewController {
             canDecrease = false;
         }
         if (canDecrease){
-            num -= 0.5
+            num -= 1
             cupDisplay.text = "\(num)"
         }
         else{

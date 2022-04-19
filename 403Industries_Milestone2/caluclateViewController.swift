@@ -50,7 +50,10 @@ class caluclateViewController: UIViewController {
         formatter.roundingMode = .halfUp
         formatter.maximumFractionDigits = 0
         let cupString = String(format: "%.0f", cups)
-        let num =   formatter.number(from: cupString) as? NSDecimalNumber ?? 0
+        var num =   formatter.number(from: cupString) as? NSDecimalNumber ?? 0
+            if (num.intValue >= 17){
+                num = 16.0
+            }
             print("new data added")
             let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
           let newUser = UserMO(entity: entity, insertInto: managedContext)
@@ -66,7 +69,7 @@ class caluclateViewController: UIViewController {
     }
     
     @IBAction func incWeight(){
-        if (weight < 1000){
+        if (weight < 300){
             weight+=2
             weightLbl.text = "\(weight)"
         }
@@ -113,6 +116,9 @@ class caluclateViewController: UIViewController {
             formatter.numberStyle = .decimal
             formatter.roundingMode = .halfUp
             formatter.maximumFractionDigits = 0
+            if (cups > 16){
+                cups = 16.0
+            }
             let cupNum = String(format: "%.0f", cups)
     
             cupAmtDisplay.text = "\(cupNum)"

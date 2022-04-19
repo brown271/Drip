@@ -16,6 +16,7 @@
 		273F7C43280E66AB00AD955B /* UserMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C3F280E66AB00AD955B /* UserMO+CoreDataClass.swift */; };
 		273F7C44280E66AB00AD955B /* UserMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C40280E66AB00AD955B /* UserMO+CoreDataProperties.swift */; };
 		273F7C46280E87FC00AD955B /* HBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C45280E87FC00AD955B /* HBViewController.swift */; };
+		273F7C4A280F44BA00AD955B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C49280F44BA00AD955B /* SettingsTableViewController.swift */; };
 		4DA987D227E7C8C300496901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D127E7C8C300496901 /* AppDelegate.swift */; };
 		4DA987D427E7C8C300496901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D327E7C8C300496901 /* SceneDelegate.swift */; };
 		4DA987D627E7C8C300496901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D527E7C8C300496901 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 		273F7C3F280E66AB00AD955B /* UserMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		273F7C40280E66AB00AD955B /* UserMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		273F7C45280E87FC00AD955B /* HBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBViewController.swift; sourceTree = "<group>"; };
+		273F7C49280F44BA00AD955B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		4DA987CE27E7C8C300496901 /* 403Industries_Milestone2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 403Industries_Milestone2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA987D127E7C8C300496901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA987D327E7C8C300496901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		4DA987C527E7C8C300496901 = {
 			isa = PBXGroup;
 			children = (
+				273F7C49280F44BA00AD955B /* SettingsTableViewController.swift */,
 				273F7C45280E87FC00AD955B /* HBViewController.swift */,
 				4DA987D027E7C8C300496901 /* 403Industries_Milestone2 */,
 				4DA987CF27E7C8C300496901 /* Products */,
@@ -183,6 +186,7 @@
 				4DA987D227E7C8C300496901 /* AppDelegate.swift in Sources */,
 				273F7C44280E66AB00AD955B /* UserMO+CoreDataProperties.swift in Sources */,
 				4DA987D427E7C8C300496901 /* SceneDelegate.swift in Sources */,
+				273F7C4A280F44BA00AD955B /* SettingsTableViewController.swift in Sources */,
 				273F7C46280E87FC00AD955B /* HBViewController.swift in Sources */,
 				273F7C42280E66AB00AD955B /* WaterRecordMO+CoreDataProperties.swift in Sources */,
 				273F7C30280BBE8E00AD955B /* setupViewController.swift in Sources */,
