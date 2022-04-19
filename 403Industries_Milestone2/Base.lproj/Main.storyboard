@@ -365,6 +365,9 @@
                                         <color key="backgroundColor" red="0.27058823529999998" green="0.58431372550000005" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="continueToMain" destination="cGH-8S-Ny2" eventType="touchUpInside" id="CIP-ts-S8p"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jhF-AR-Gvd"/>
@@ -376,6 +379,7 @@
                         <outlet property="cupAmtDisplay" destination="zKr-Wv-fVe" id="gRP-jZ-2VR"/>
                         <outlet property="cupDisplay" destination="khe-Fz-1ee" id="Aae-Vu-avD"/>
                         <outlet property="weightLbl" destination="6xz-N0-Caq" id="fLW-x2-B1f"/>
+                        <segue destination="nRX-O5-yrY" kind="presentation" identifier="calToMain" modalPresentationStyle="fullScreen" id="CAL-yJ-BuN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6l-HD-tMy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1560,7 +1564,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NDX-q2-cUI"/>
+        <segue reference="CAL-yJ-BuN"/>
         <segue reference="WmF-Ri-d27"/>
         <segue reference="Amv-cV-0ko"/>
         <segue reference="in1-xJ-Bpp"/>
