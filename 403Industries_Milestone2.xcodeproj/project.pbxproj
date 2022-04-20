@@ -17,6 +17,7 @@
 		273F7C50280F640600AD955B /* WaterRecordMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C4C280F640600AD955B /* WaterRecordMO+CoreDataProperties.swift */; };
 		273F7C51280F640600AD955B /* UserMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C4D280F640600AD955B /* UserMO+CoreDataClass.swift */; };
 		273F7C52280F640600AD955B /* UserMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273F7C4E280F640600AD955B /* UserMO+CoreDataProperties.swift */; };
+		279A1BAF2810B00000D4654F /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1BAE2810B00000D4654F /* DonateViewController.swift */; };
 		27C3C8EE280FC9E400C3B146 /* WipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8ED280FC9E400C3B146 /* WipeViewController.swift */; };
 		27C3C8F22810622C00C3B146 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8F12810622C00C3B146 /* CollectionViewCell.swift */; };
 		27C3C8F42810669A00C3B146 /* HitsoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8F32810669A00C3B146 /* HitsoryViewController.swift */; };
@@ -40,6 +41,7 @@
 		273F7C4C280F640600AD955B /* WaterRecordMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterRecordMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		273F7C4D280F640600AD955B /* UserMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		273F7C4E280F640600AD955B /* UserMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		279A1BAE2810B00000D4654F /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		27C3C8ED280FC9E400C3B146 /* WipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WipeViewController.swift; sourceTree = "<group>"; };
 		27C3C8F12810622C00C3B146 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		27C3C8F32810669A00C3B146 /* HitsoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsoryViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		4DA987C527E7C8C300496901 = {
 			isa = PBXGroup;
 			children = (
+				279A1BAE2810B00000D4654F /* DonateViewController.swift */,
 				27C3C8F32810669A00C3B146 /* HitsoryViewController.swift */,
 				27C3C8F12810622C00C3B146 /* CollectionViewCell.swift */,
 				27C3C8ED280FC9E400C3B146 /* WipeViewController.swift */,
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				273F7C4F280F640600AD955B /* WaterRecordMO+CoreDataClass.swift in Sources */,
+				279A1BAF2810B00000D4654F /* DonateViewController.swift in Sources */,
 				27C3C8EE280FC9E400C3B146 /* WipeViewController.swift in Sources */,
 				4DA987D627E7C8C300496901 /* ViewController.swift in Sources */,
 				273F7C32280BBE9E00AD955B /* baseViewController.swift in Sources */,

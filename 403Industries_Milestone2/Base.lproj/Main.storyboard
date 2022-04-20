@@ -598,10 +598,10 @@
             </objects>
             <point key="canvasLocation" x="3026.1538461538462" y="1479.3838862559242"/>
         </scene>
-        <!--View Controller-->
+        <!--Donate View Controller-->
         <scene sceneID="g6w-gH-WAL">
             <objects>
-                <viewController id="ltk-Sn-uiA" sceneMemberID="viewController">
+                <viewController id="ltk-Sn-uiA" customClass="DonateViewController" customModule="_03Industries_Milestone2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nv1-zq-Qco">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -680,6 +680,9 @@
                                 <rect key="frame" x="13" y="743" width="365" height="67"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="donateBlue"/>
+                                <connections>
+                                    <action selector="donate" destination="ltk-Sn-uiA" eventType="touchUpInside" id="Y4C-wi-i6J"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0zI-om-8Qj"/>
@@ -1317,7 +1320,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5n8-tH-Y2H"/>
+        <segue reference="hbe-AU-epy"/>
         <segue reference="rfq-2f-g8T"/>
         <segue reference="WmF-Ri-d27"/>
         <segue reference="8b1-wF-dGj"/>
