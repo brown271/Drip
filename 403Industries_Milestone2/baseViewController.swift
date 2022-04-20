@@ -47,20 +47,37 @@ class baseViewController: UIViewController {
         
         let count = (try? managedContext.count(for: fetch)) ?? 0
         
-    
+        var isCurrentDay = false
         //records are too long
-        if count >= 3 {
+        
+            print(count)
             do{
                 let records = try managedContext.fetch(fetch)
+                var oldest = records.first
                 for r in records{
                     print(r.date!)
+                    if (r.date! < oldest!.date!){
+                        oldest = r
+                    }
+                    if (isSameDay(date1: r.date!, date2: Date.now)){
+                        isCurrentDay = true;
+                        currentDay = r
+                        currentCups.text = "\(r.currentWater!)"
+                    }
+                }
+                if count > 8 {
+                print("deleting oldest record")
+                 managedContext.delete(oldest!)
+                try managedContext.save()
                 }
             }catch{
                 fatalError("Yikes! \(error)")
             }
             
-        }
-        else{ //good to make new record
+        
+         //good to make new record
+        if(!isCurrentDay){
+            print("New Day new Record!")
             let entity = NSEntityDescription.entity(forEntityName: "WaterRecord", in: managedContext)!
           let currentDay = WaterRecordMO(entity: entity, insertInto: managedContext)
             currentDay.date = Date.now
@@ -68,10 +85,20 @@ class baseViewController: UIViewController {
                 try!  managedContext.save()
             currentCups.text = "0"
         }
+            
+        
     }
     
-  
     
+    
+  
+    func isSameDay(date1: Date, date2: Date) ->Bool{
+        let dayDiff = Calendar.current.dateComponents([.day], from: date1, to: date2)
+        if (dayDiff.day == 0){
+            return true
+        }
+        return false
+    }
 
     /*
     // MARK: - Navigation

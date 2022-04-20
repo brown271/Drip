@@ -892,10 +892,10 @@
             </objects>
             <point key="canvasLocation" x="2433.8461538461538" y="2223.6966824644551"/>
         </scene>
-        <!--View Controller-->
+        <!--Wipe View Controller-->
         <scene sceneID="6oa-P1-9ur">
             <objects>
-                <viewController id="J1K-4Q-dS7" sceneMemberID="viewController">
+                <viewController id="J1K-4Q-dS7" customClass="WipeViewController" customModule="_03Industries_Milestone2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rGv-qF-Phg">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1373,7 +1373,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gz9-FJ-UFw"/>
+        <segue reference="5n8-tH-Y2H"/>
         <segue reference="NDX-q2-cUI"/>
         <segue reference="WmF-Ri-d27"/>
         <segue reference="Amv-cV-0ko"/>
