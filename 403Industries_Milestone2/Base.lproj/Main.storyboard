@@ -398,7 +398,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lose weight." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRR-Mj-wzG">
-                                <rect key="frame" x="108" y="232" width="179" height="31"/>
+                                <rect key="frame" x="108" y="232" width="238" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -413,7 +413,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lose weight." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvn-mx-3WX">
-                                <rect key="frame" x="108" y="454" width="170" height="32"/>
+                                <rect key="frame" x="108" y="454" width="238" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -1318,7 +1318,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5n8-tH-Y2H"/>
-        <segue reference="uwC-2g-ckF"/>
+        <segue reference="rfq-2f-g8T"/>
         <segue reference="WmF-Ri-d27"/>
         <segue reference="8b1-wF-dGj"/>
         <segue reference="in1-xJ-Bpp"/>
