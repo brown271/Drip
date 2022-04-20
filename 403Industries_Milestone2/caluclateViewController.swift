@@ -50,18 +50,15 @@ class caluclateViewController: UIViewController {
         formatter.roundingMode = .halfUp
         formatter.maximumFractionDigits = 0
         let cupString = String(format: "%.0f", cups)
-        var num =   formatter.number(from: cupString) as? NSDecimalNumber ?? 0
-            if (num.intValue >= 17){
-                num = 16.0
-            }
+       
             print("new data added")
             let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
           let newUser = UserMO(entity: entity, insertInto: managedContext)
-            newUser.age = Decimal(age) as NSDecimalNumber
-            newUser.waterGoal = num
+            newUser.age = age
+            newUser.waterGoal = Int32(cupString) ?? 8
             newUser.user = "user"
-            newUser.weight = Decimal(weight) as NSDecimalNumber
-            print(newUser.weight!)
+            newUser.weight = weight
+       
                 try!  managedContext.save()
             performSegue(withIdentifier: "calToMain", sender: nil)
         }

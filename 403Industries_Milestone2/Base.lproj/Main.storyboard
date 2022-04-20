@@ -1077,6 +1077,10 @@
                         <viewLayoutGuide key="safeArea" id="5ck-Pr-Wge"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="cupGoal" destination="hyD-Gk-QXB" id="cvL-T4-0FE"/>
+                        <outlet property="currentCups" destination="3mK-Hc-yhy" id="7QV-te-pPv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pC2-bb-AEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1369,10 +1373,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="g1P-v3-ztl"/>
-        <segue reference="5n8-tH-Y2H"/>
+        <segue reference="gz9-FJ-UFw"/>
         <segue reference="NDX-q2-cUI"/>
-        <segue reference="NBA-xP-VhT"/>
+        <segue reference="WmF-Ri-d27"/>
         <segue reference="Amv-cV-0ko"/>
         <segue reference="in1-xJ-Bpp"/>
     </inferredMetricsTieBreakers>

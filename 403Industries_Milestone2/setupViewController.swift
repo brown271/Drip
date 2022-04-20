@@ -13,7 +13,7 @@ class setupViewController: UIViewController {
     @IBOutlet var cupDisplay: UILabel!
     
     var managedContext: NSManagedObjectContext!
-    var num: Decimal = 8.0
+    var num: Int32 = 8
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +29,10 @@ class setupViewController: UIViewController {
         print("new data added")
         let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
       let newUser = UserMO(entity: entity, insertInto: managedContext)
-        newUser.age = 25.0 as NSDecimalNumber
-        newUser.waterGoal = num as NSDecimalNumber
+        newUser.age = 25
+        newUser.waterGoal = num
         newUser.user = "user"
-        newUser.weight = 160.0 as NSDecimalNumber
+        newUser.weight = 160
             try!  managedContext.save()
         performSegue(withIdentifier: "setupToMain", sender: nil)
     }

@@ -2,7 +2,7 @@
 //  UserMO+CoreDataProperties.swift
 //  403Industries_Milestone2
 //
-//  Created by  on 2022-04-18.
+//  Created by  on 2022-04-19.
 //
 //
 
@@ -16,11 +16,11 @@ extension UserMO {
         return NSFetchRequest<UserMO>(entityName: "User")
     }
 
+    @NSManaged public var age: Int32
     @NSManaged public var user: String?
-    @NSManaged public var waterGoal: NSDecimalNumber?
-    @NSManaged public var weight: NSDecimalNumber?
+    @NSManaged public var waterGoal: Int32
+    @NSManaged public var weight: Int32
     @NSManaged public var weightUnit: String?
-    @NSManaged public var age: NSDecimalNumber?
     @NSManaged public var userToRecord: NSSet?
 
 }
