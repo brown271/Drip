@@ -70,16 +70,6 @@
 		4DA987C527E7C8C300496901 = {
 			isa = PBXGroup;
 			children = (
-				279A1BAE2810B00000D4654F /* DonateViewController.swift */,
-				27C3C8F32810669A00C3B146 /* HitsoryViewController.swift */,
-				27C3C8F12810622C00C3B146 /* CollectionViewCell.swift */,
-				27C3C8ED280FC9E400C3B146 /* WipeViewController.swift */,
-				273F7C4B280F640600AD955B /* WaterRecordMO+CoreDataClass.swift */,
-				273F7C4C280F640600AD955B /* WaterRecordMO+CoreDataProperties.swift */,
-				273F7C4D280F640600AD955B /* UserMO+CoreDataClass.swift */,
-				273F7C4E280F640600AD955B /* UserMO+CoreDataProperties.swift */,
-				273F7C49280F44BA00AD955B /* SettingsTableViewController.swift */,
-				273F7C45280E87FC00AD955B /* HBViewController.swift */,
 				4DA987D027E7C8C300496901 /* 403Industries_Milestone2 */,
 				4DA987CF27E7C8C300496901 /* Products */,
 			);
@@ -96,6 +86,16 @@
 		4DA987D027E7C8C300496901 /* 403Industries_Milestone2 */ = {
 			isa = PBXGroup;
 			children = (
+				279A1BAE2810B00000D4654F /* DonateViewController.swift */,
+				27C3C8F32810669A00C3B146 /* HitsoryViewController.swift */,
+				27C3C8F12810622C00C3B146 /* CollectionViewCell.swift */,
+				27C3C8ED280FC9E400C3B146 /* WipeViewController.swift */,
+				273F7C4B280F640600AD955B /* WaterRecordMO+CoreDataClass.swift */,
+				273F7C4C280F640600AD955B /* WaterRecordMO+CoreDataProperties.swift */,
+				273F7C4D280F640600AD955B /* UserMO+CoreDataClass.swift */,
+				273F7C4E280F640600AD955B /* UserMO+CoreDataProperties.swift */,
+				273F7C49280F44BA00AD955B /* SettingsTableViewController.swift */,
+				273F7C45280E87FC00AD955B /* HBViewController.swift */,
 				273F7C33280DD03900AD955B /* caluclateViewController.swift */,
 				4DA987D127E7C8C300496901 /* AppDelegate.swift */,
 				4DA987D327E7C8C300496901 /* SceneDelegate.swift */,

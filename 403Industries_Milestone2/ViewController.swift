@@ -26,7 +26,54 @@ class ViewController: UIViewController {
         
         
         let delete = NSBatchDeleteRequest(fetchRequest: fetch)
-        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound] ){success, error in
+            if (success){
+                //notif 1
+                UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+                UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                let notif = UNMutableNotificationContent()
+                notif.title = "Let's drink some water."
+                notif.body = "Hey there, looks like you should have some water."
+                notif.sound = UNNotificationSound.default
+                notif.badge = 1
+                
+                var date = DateComponents()
+                date.hour = 13
+                let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+                let request = UNNotificationRequest(identifier: "waterNotif", content: notif, trigger: trigger)
+                let center = UNUserNotificationCenter.current()
+                center.add(request){ (error) in
+                    if let error = error{
+                        print ("Error: \(error)")
+                    }else{
+                        print("Notification Scheduled")
+                    }
+                }
+                //notif 2
+                    let notif2 = UNMutableNotificationContent()
+                    notif2.title = "Let's drink some more water."
+                    notif2.body = "Hey there, looks like you should have some water."
+                    notif2.sound = UNNotificationSound.default
+                    notif2.badge = 1
+                    
+                    var date2 = DateComponents()
+                    date2.hour = 20
+                    let trigger2 = UNCalendarNotificationTrigger(dateMatching: date2, repeats: true)
+                    let request2 = UNNotificationRequest(identifier: "waterNotif2", content: notif2, trigger: trigger2)
+                    
+                    center.add(request2){ (error) in
+                        if let error = error{
+                            print ("Error: \(error)")
+                        }else{
+                            print("Notification 2 Scheduled")
+                        }
+                    }
+                   
+                
+            }else if let error = error {
+                print("Yikes \(error)")
+            }
+        }
         do{
             try managedContext.execute(delete)
             print ("data wiped")
