@@ -19,13 +19,19 @@ class WipeViewController: UIViewController {
         
         let fetch : NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "WaterRecord")
         
+        let fetch2 : NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "User")
+        
         
         let delete = NSBatchDeleteRequest(fetchRequest: fetch)
+        let delete2 = NSBatchDeleteRequest(fetchRequest: fetch2)
         
         do{
             try managedContext.execute(delete)
+            try managedContext.execute(delete2)
+            try managedContext.save()
             print ("water records wiped")
             performSegue(withIdentifier: "reset", sender: nil)
+            
         }catch let error as NSError{
             print("yikes!, \(error)")
         }

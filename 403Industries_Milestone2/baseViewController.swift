@@ -49,6 +49,13 @@ class baseViewController: UIViewController {
             let cur = currentDay.currentWater!.decimalValue + inc.decimalValue
             currentDay.currentWater = NSDecimalNumber(decimal: cur)
             currentCups.text = "\(currentDay.currentWater!)"
+            do{
+                try
+                    currentDay.managedObjectContext?.save()
+                
+            }catch{
+                fatalError("Failure to save. Dang.")
+            }
         }
     }
     
@@ -59,6 +66,13 @@ class baseViewController: UIViewController {
             let cur = currentDay.currentWater!.decimalValue + inc.decimalValue
             currentDay.currentWater = NSDecimalNumber(decimal: cur)
             currentCups.text = "\(currentDay.currentWater!)"
+            do{
+                try
+                    currentDay.managedObjectContext?.save()
+                
+            }catch{
+                fatalError("Failure to save. Dang.")
+            }
         }
     }
     
@@ -69,6 +83,13 @@ class baseViewController: UIViewController {
             let cur = currentDay.currentWater!.decimalValue + inc.decimalValue
             currentDay.currentWater = NSDecimalNumber(decimal: cur)
             currentCups.text = "\(currentDay.currentWater!)"
+            do{
+                try
+                    currentDay.managedObjectContext?.save()
+                
+            }catch{
+                fatalError("Failure to save. Dang.")
+            }
         }
     }
     
@@ -131,7 +152,18 @@ class baseViewController: UIViewController {
           let currentDay = WaterRecordMO(entity: entity, insertInto: managedContext)
             currentDay.date = Date.now
             currentDay.currentWater = 0.0
-                try!  managedContext.save()
+            do{
+                try
+                    currentDay.managedObjectContext?.save()
+                
+            }catch{
+                fatalError("Failure to save. Dang.")
+            }
+ 
+            
+          
+           
+            
             currentCups.text = "0"
         }
             
