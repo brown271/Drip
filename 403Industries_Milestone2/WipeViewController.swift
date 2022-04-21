@@ -25,6 +25,7 @@ class WipeViewController: UIViewController {
         do{
             try managedContext.execute(delete)
             print ("water records wiped")
+            performSegue(withIdentifier: "reset", sender: nil)
         }catch let error as NSError{
             print("yikes!, \(error)")
         }

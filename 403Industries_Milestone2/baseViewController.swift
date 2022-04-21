@@ -14,6 +14,10 @@ class baseViewController: UIViewController {
     @IBOutlet var currentCups: UILabel!
     @IBOutlet var cupGoal:UILabel!
     
+    @IBOutlet var inspoText:UILabel!
+    
+    var inspiration = ["Keep up the good work!","Keep going, almost there!","You got this!","So Close!", "Good job today", "You're killing it!", "I believe in you!", "Lets Drink Some Water!", "Water Time, Drink Up!", "Amazing job!"]
+    
     var user: UserMO!
     var currentDay: WaterRecordMO!
     var managedContext: NSManagedObjectContext!
@@ -23,6 +27,8 @@ class baseViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         managedContext = appDelegate?.persistentContainer.viewContext
         super.viewDidLoad()
+        let rand = Int.random(in: 0..<inspiration.count)
+        inspoText.text = inspiration[rand]
         loadUser()
         cupGoal.text = "\(user.waterGoal)"
         loadRecord()
@@ -34,6 +40,35 @@ class baseViewController: UIViewController {
             audioPlayer3.prepareToPlay()
         }catch{
             print(error)
+        }
+    }
+    
+    @IBAction func inchalf(){
+        let inc :NSDecimalNumber = 0.5
+        if ((currentDay.currentWater!.doubleValue + 0.5) <= Double(user.waterGoal)){
+            let cur = currentDay.currentWater!.decimalValue + inc.decimalValue
+            currentDay.currentWater = NSDecimalNumber(decimal: cur)
+            currentCups.text = "\(currentDay.currentWater!)"
+        }
+    }
+    
+    
+    @IBAction func incone(){
+        let inc :NSDecimalNumber = 1.0
+        if ((currentDay.currentWater!.doubleValue + 1.0) <= Double(user.waterGoal)){
+            let cur = currentDay.currentWater!.decimalValue + inc.decimalValue
+            currentDay.currentWater = NSDecimalNumber(decimal: cur)
+            currentCups.text = "\(currentDay.currentWater!)"
+        }
+    }
+    
+    
+    @IBAction func inctwo(){
+        let inc :NSDecimalNumber = 2.0
+        if ((currentDay.currentWater!.doubleValue + 2.0) <= Double(user.waterGoal)){
+            let cur = currentDay.currentWater!.decimalValue + inc.decimalValue
+            currentDay.currentWater = NSDecimalNumber(decimal: cur)
+            currentCups.text = "\(currentDay.currentWater!)"
         }
     }
     

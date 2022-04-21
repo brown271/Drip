@@ -40,10 +40,10 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         managedContext = appDelegate?.persistentContainer.viewContext
         
-        let fetch : NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "User")
         
         
-        let delete = NSBatchDeleteRequest(fetchRequest: fetch)
+        
+       
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound] ){success, error in
             if (success){
                 //notif 1
@@ -92,12 +92,7 @@ class ViewController: UIViewController {
                 print("Yikes \(error)")
             }
         }
-        do{
-            try managedContext.execute(delete)
-            print ("data wiped")
-        }catch let error as NSError{
-            print("yikes!, \(error)")
-        }
+        
         // Do any additional setup after loading the view.
     }
     

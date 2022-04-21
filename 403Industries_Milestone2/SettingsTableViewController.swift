@@ -79,6 +79,12 @@ class SettingsTableViewController: UITableViewController {
         }
     
     }
+    
+    @IBAction func showPriv(){
+        let alert = UIAlertController(title: "Hi There!", message: "Drip doesn't send any of your information anywhere. It's all stored locally on your phone and never accesed by us.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cool, Thanks!", style: .default, handler: nil))
+        self.present(alert,animated: true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -250,7 +256,7 @@ class SettingsTableViewController: UITableViewController {
             let delete = NSBatchDeleteRequest(fetchRequest: fetch)
             do{
                 try managedContext.execute(delete)
-                print ("data wiped")
+                print ("User Updated")
             }catch let error as NSError{
                 print("yikes!, \(error)")
             }
