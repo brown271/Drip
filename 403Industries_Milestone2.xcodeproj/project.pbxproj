@@ -21,6 +21,10 @@
 		27C3C8EE280FC9E400C3B146 /* WipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8ED280FC9E400C3B146 /* WipeViewController.swift */; };
 		27C3C8F22810622C00C3B146 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8F12810622C00C3B146 /* CollectionViewCell.swift */; };
 		27C3C8F42810669A00C3B146 /* HitsoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C3C8F32810669A00C3B146 /* HitsoryViewController.swift */; };
+		4D4EFA85281100800022D2CA /* waterdrop6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D4EFA812811007F0022D2CA /* waterdrop6.mp3 */; };
+		4D4EFA86281100800022D2CA /* waterdrop2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D4EFA82281100800022D2CA /* waterdrop2.mp3 */; };
+		4D4EFA87281100800022D2CA /* water drop 9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D4EFA83281100800022D2CA /* water drop 9.mp3 */; };
+		4D4EFA88281100800022D2CA /* waterdrop8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D4EFA84281100800022D2CA /* waterdrop8.mp3 */; };
 		4DA987D227E7C8C300496901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D127E7C8C300496901 /* AppDelegate.swift */; };
 		4DA987D427E7C8C300496901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D327E7C8C300496901 /* SceneDelegate.swift */; };
 		4DA987D627E7C8C300496901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA987D527E7C8C300496901 /* ViewController.swift */; };
@@ -45,6 +49,10 @@
 		27C3C8ED280FC9E400C3B146 /* WipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WipeViewController.swift; sourceTree = "<group>"; };
 		27C3C8F12810622C00C3B146 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		27C3C8F32810669A00C3B146 /* HitsoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitsoryViewController.swift; sourceTree = "<group>"; };
+		4D4EFA812811007F0022D2CA /* waterdrop6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waterdrop6.mp3; sourceTree = "<group>"; };
+		4D4EFA82281100800022D2CA /* waterdrop2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waterdrop2.mp3; sourceTree = "<group>"; };
+		4D4EFA83281100800022D2CA /* water drop 9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "water drop 9.mp3"; sourceTree = "<group>"; };
+		4D4EFA84281100800022D2CA /* waterdrop8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waterdrop8.mp3; sourceTree = "<group>"; };
 		4DA987CE27E7C8C300496901 /* 403Industries_Milestone2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 403Industries_Milestone2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA987D127E7C8C300496901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA987D327E7C8C300496901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D4EFA80281100290022D2CA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4D4EFA82281100800022D2CA /* waterdrop2.mp3 */,
+				4D4EFA812811007F0022D2CA /* waterdrop6.mp3 */,
+				4D4EFA84281100800022D2CA /* waterdrop8.mp3 */,
+				4D4EFA83281100800022D2CA /* water drop 9.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		4DA987C527E7C8C300496901 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +125,7 @@
 				4DA987DA27E7C8C400496901 /* Assets.xcassets */,
 				4DA987DC27E7C8C400496901 /* LaunchScreen.storyboard */,
 				4DA987DF27E7C8C400496901 /* Info.plist */,
+				4D4EFA80281100290022D2CA /* Sounds */,
 				4DA987E527E7D5F900496901 /* fonts */,
 				273F7C24280B56DF00AD955B /* Model.xcdatamodeld */,
 			);
@@ -180,7 +200,11 @@
 			files = (
 				4DA987DE27E7C8C400496901 /* LaunchScreen.storyboard in Resources */,
 				4DA987DB27E7C8C400496901 /* Assets.xcassets in Resources */,
+				4D4EFA86281100800022D2CA /* waterdrop2.mp3 in Resources */,
+				4D4EFA85281100800022D2CA /* waterdrop6.mp3 in Resources */,
+				4D4EFA87281100800022D2CA /* water drop 9.mp3 in Resources */,
 				4DA987D927E7C8C300496901 /* Main.storyboard in Resources */,
+				4D4EFA88281100800022D2CA /* waterdrop8.mp3 in Resources */,
 				4DA987E727E7D61C00496901 /* Nirmala.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

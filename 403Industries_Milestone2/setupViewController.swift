@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 class setupViewController: UIViewController {
     
@@ -14,15 +15,24 @@ class setupViewController: UIViewController {
     
     var managedContext: NSManagedObjectContext!
     var num: Int32 = 8
+    var audioPlayer2 = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         managedContext = appDelegate?.persistentContainer.viewContext
         // Do any additional setup after loading the view.
+        
+        //sounds function 2
+        do{
+            audioPlayer2 = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "waterdrop6", ofType: "mp3")!))
+            audioPlayer2.prepareToPlay()
+        }catch{
+            print(error)
+        }
     }
     
-
+    
     
     
     @IBAction func setGoal(){
@@ -39,6 +49,10 @@ class setupViewController: UIViewController {
     
     @IBAction func calculate(){
         performSegue(withIdentifier: "calculate", sender: nil)
+    }
+    
+    @IBAction func Play2(_ sender: Any){
+        audioPlayer2.play()
     }
     
     @IBAction func increase(){

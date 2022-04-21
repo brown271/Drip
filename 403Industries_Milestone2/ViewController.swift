@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -14,9 +15,26 @@ class ViewController: UIViewController {
     @IBOutlet var cancelBtn: UIButton!
     
     var managedContext: NSManagedObjectContext!
+    //buttonSounds
+    var audioPlayer = AVAudioPlayer()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //do function to play audio on button press
+        
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "waterdrop2", ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+        }catch{
+            print(error)
+        }
+        
+        
+        
+        
         
         
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -105,6 +123,12 @@ class ViewController: UIViewController {
       
       
     }
+    //get started button drip sounds
+    @IBAction func Play(_ sender: Any){
+        audioPlayer.play()
+    }
+    
+    
     
     func isUserSetup() -> Bool {
         

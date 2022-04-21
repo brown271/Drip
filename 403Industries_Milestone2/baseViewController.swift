@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 class baseViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class baseViewController: UIViewController {
     var user: UserMO!
     var currentDay: WaterRecordMO!
     var managedContext: NSManagedObjectContext!
+    var audioPlayer3 = AVAudioPlayer()
 
     override func viewDidLoad() {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -25,6 +27,18 @@ class baseViewController: UIViewController {
         cupGoal.text = "\(user.waterGoal)"
         loadRecord()
         // Do any additional setup after loading the view.
+        
+        //sound function 3
+        do{
+            audioPlayer3 = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "waterdrop8", ofType: "mp3")!))
+            audioPlayer3.prepareToPlay()
+        }catch{
+            print(error)
+        }
+    }
+    
+    @IBAction func Play3(_ sender: Any){
+        audioPlayer3.play()
     }
     
     func loadUser(){
