@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fVg-od-VHc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fVg-od-VHc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -684,7 +684,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lemon Water" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSN-pR-Rs1">
-                                <rect key="frame" x="128.5" y="224" width="152" height="28"/>
+                                <rect key="frame" x="107" y="224" width="198" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="dDW-ny-heS"/>
                                 </constraints>
@@ -730,7 +730,7 @@
                             <constraint firstItem="0xe-J1-Hcz" firstAttribute="centerX" secondItem="Oq6-qc-zGc" secondAttribute="centerX" id="9DR-S0-ftT"/>
                             <constraint firstItem="GqT-lM-17M" firstAttribute="top" secondItem="cZO-YP-2QU" secondAttribute="bottom" constant="7" id="DPG-8t-z1P"/>
                             <constraint firstItem="cZO-YP-2QU" firstAttribute="centerX" secondItem="g3A-yI-HHo" secondAttribute="centerX" id="GFq-f8-IQH"/>
-                            <constraint firstItem="Nk8-av-Imw" firstAttribute="trailing" secondItem="bSN-pR-Rs1" secondAttribute="trailing" constant="133.48599429272736" id="Hx3-sZ-5cp"/>
+                            <constraint firstItem="Nk8-av-Imw" firstAttribute="trailing" secondItem="bSN-pR-Rs1" secondAttribute="trailing" constant="109" id="Hx3-sZ-5cp"/>
                             <constraint firstItem="Dth-kc-EP1" firstAttribute="centerX" secondItem="0xe-J1-Hcz" secondAttribute="centerX" id="INR-10-Pdi"/>
                             <constraint firstItem="Nk8-av-Imw" firstAttribute="bottom" secondItem="uwL-Z1-sJG" secondAttribute="bottom" constant="136" id="Klu-61-CUL"/>
                             <constraint firstItem="uwL-Z1-sJG" firstAttribute="leading" secondItem="Nk8-av-Imw" secondAttribute="leading" constant="25.51400570727219" id="LgU-AT-kAe"/>
@@ -756,7 +756,7 @@
                             <constraint firstItem="Nk8-av-Imw" firstAttribute="bottom" secondItem="NQZ-iy-q07" secondAttribute="bottom" constant="110.00000000000045" id="rdM-5P-pIr"/>
                             <constraint firstItem="g3A-yI-HHo" firstAttribute="leading" secondItem="Nk8-av-Imw" secondAttribute="leading" constant="71.18067237393916" id="ss0-Ek-69Z"/>
                             <constraint firstItem="uwL-Z1-sJG" firstAttribute="top" secondItem="Oq6-qc-zGc" secondAttribute="bottom" constant="8" symbolic="YES" id="tby-pC-HUO"/>
-                            <constraint firstItem="bSN-pR-Rs1" firstAttribute="leading" secondItem="Nk8-av-Imw" secondAttribute="leading" constant="128.51400570727264" id="zFt-Sl-P7A"/>
+                            <constraint firstItem="bSN-pR-Rs1" firstAttribute="leading" secondItem="Nk8-av-Imw" secondAttribute="leading" constant="107" id="zFt-Sl-P7A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wWb-44-Fq3"/>
@@ -764,7 +764,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ri-hX-CTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="tea-PW-Hqv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3026.1538461538462" y="1479.3838862559242"/>
+            <point key="canvasLocation" x="3026.0869565217395" y="1479.2410714285713"/>
         </scene>
         <!--Donate View Controller-->
         <scene sceneID="g6w-gH-WAL">
@@ -1206,7 +1206,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2.5" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2U-8K-hDY">
-                                <rect key="frame" x="127" y="204" width="161" height="132"/>
+                                <rect key="frame" x="106" y="204" width="199" height="132.00000000000011"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="100"/>
                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -1250,9 +1250,9 @@
                             <constraint firstItem="bK9-NJ-Zp9" firstAttribute="top" secondItem="vAP-IF-ZcN" secondAttribute="bottom" constant="49" id="boQ-A0-BHW"/>
                             <constraint firstItem="0TU-yX-nst" firstAttribute="leading" secondItem="4Yb-k6-HoG" secondAttribute="trailing" constant="35" id="cv7-yg-zHW"/>
                             <constraint firstItem="vAP-IF-ZcN" firstAttribute="centerX" secondItem="4Yb-k6-HoG" secondAttribute="centerX" id="dIi-U4-4rw"/>
-                            <constraint firstItem="J2U-8K-hDY" firstAttribute="leading" secondItem="5ck-Pr-Wge" secondAttribute="leading" constant="127" id="epg-vU-dxN"/>
+                            <constraint firstItem="J2U-8K-hDY" firstAttribute="leading" secondItem="5ck-Pr-Wge" secondAttribute="leading" constant="106" id="epg-vU-dxN"/>
                             <constraint firstItem="vAP-IF-ZcN" firstAttribute="centerX" secondItem="bK9-NJ-Zp9" secondAttribute="centerX" id="hlZ-fl-hnQ"/>
-                            <constraint firstItem="J2U-8K-hDY" firstAttribute="centerX" secondItem="yna-We-JvW" secondAttribute="centerX" constant="2" id="jyx-EZ-CQq"/>
+                            <constraint firstItem="J2U-8K-hDY" firstAttribute="centerX" secondItem="yna-We-JvW" secondAttribute="centerX" id="jyx-EZ-CQq"/>
                             <constraint firstItem="Rpw-rS-x0w" firstAttribute="leading" secondItem="5ck-Pr-Wge" secondAttribute="leading" constant="167" id="kfo-to-txw"/>
                             <constraint firstItem="if2-0x-BdS" firstAttribute="top" secondItem="zFM-BV-4JU" secondAttribute="bottom" constant="27" id="n6R-HL-fUG"/>
                             <constraint firstItem="4Yb-k6-HoG" firstAttribute="bottom" secondItem="0TU-yX-nst" secondAttribute="bottom" id="sUw-6N-nbF"/>
@@ -1682,7 +1682,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="gz9-FJ-UFw"/>
         <segue reference="3ha-tq-kNe"/>
-        <segue reference="Zdf-RG-JI2"/>
+        <segue reference="WmF-Ri-d27"/>
         <segue reference="wmq-xO-6GV"/>
         <segue reference="in1-xJ-Bpp"/>
     </inferredMetricsTieBreakers>
