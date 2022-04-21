@@ -10,6 +10,7 @@ import UIKit
 class DonateViewController: UIViewController {
     
     @IBAction func donate(){
+        //inform user to save their money
         let alert = UIAlertController(title: "Thanks :)", message: "Thanks for offering to donate, please keep your money. If you want to help, let others know about Drip!", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert,animated: true, completion: nil)

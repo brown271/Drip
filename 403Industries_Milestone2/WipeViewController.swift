@@ -13,7 +13,7 @@ class WipeViewController: UIViewController {
     var managedContext: NSManagedObjectContext!
     
     @IBAction func wipeData(){
-        
+        //get core data
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         managedContext = appDelegate?.persistentContainer.viewContext
         
@@ -24,7 +24,7 @@ class WipeViewController: UIViewController {
         
         let delete = NSBatchDeleteRequest(fetchRequest: fetch)
         let delete2 = NSBatchDeleteRequest(fetchRequest: fetch2)
-        
+        //wipe all core data
         do{
             try managedContext.execute(delete)
             try managedContext.execute(delete2)
