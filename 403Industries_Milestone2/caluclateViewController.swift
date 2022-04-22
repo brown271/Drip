@@ -25,6 +25,7 @@ class caluclateViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         managedContext = appDelegate?.persistentContainer.viewContext
         super.viewDidLoad()
+        //set all fields to starting values
         cupDisplay.text = ""
         cupAmtDisplay.text = ""
         weightLbl.text = "\(weight)"
@@ -34,6 +35,10 @@ class caluclateViewController: UIViewController {
     }
     
     @IBAction func continueToMain(){
+        //when user clicks continue
+        //all their info is saved
+        //to avoid optionals and data errors
+        //we just calculate cups again
         if (age > 0 && weight > 0){
             var multi = 40.0
             if (age >= 30 && age  < 55){
@@ -50,7 +55,7 @@ class caluclateViewController: UIViewController {
         formatter.roundingMode = .halfUp
         formatter.maximumFractionDigits = 0
         let cupString = String(format: "%.0f", cups)
-       
+       //create the user
             print("new data added")
             let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
           let newUser = UserMO(entity: entity, insertInto: managedContext)
@@ -64,7 +69,8 @@ class caluclateViewController: UIViewController {
         }
         
     }
-    
+    //increase/decrease weight by 2
+    //increase/decrease age by 1
     @IBAction func incWeight(){
         if (weight < 300){
             weight+=2
@@ -81,14 +87,14 @@ class caluclateViewController: UIViewController {
     
     @IBAction func incAge(){
         if (age < 110){
-            age+=2
+            age+=1
             ageLbl.text = "\(age)"
         }
     }
     
     @IBAction func decAge(){
         if (age > 13){
-            age-=2
+            age-=1
             ageLbl.text = "\(age)"
         }
     }

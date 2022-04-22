@@ -29,7 +29,7 @@ class alternativesViewController2: UIViewController{
 
         // Do any additional setup after loading the view.
         
-        //1. Create URL to apple.com
+        //1. Create URL to smoothie site
         let myURL = URL(string: "https://www.healthline.com/nutrition/are-smoothies-good-for-you#basics")
         
         //2. Create request to go to this URL

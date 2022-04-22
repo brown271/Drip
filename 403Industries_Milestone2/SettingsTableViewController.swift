@@ -27,34 +27,36 @@ class SettingsTableViewController: UITableViewController {
     
     @IBAction func updateNotifs(){
         let current = UNUserNotificationCenter.current()
-        
+        //if the notif switch is activated
         if (notifSwitch.isOn){
             current.getNotificationSettings(completionHandler:{ (settings) in
+                //the the user somehow didnt get notifs yet
                 if (settings.authorizationStatus == .notDetermined){
+                    //ask them for notifs
                     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound] ){ success, error in
                         if (success){
-                            print("bababooey")
+                            
                             self.addNotifications()
                         }
                     }
-                    
+                    //if user said no to notifs
                 }else if settings.authorizationStatus == .denied{
-                    print("yeah")
+                   
                     DispatchQueue.main.async{
-                        
+                        //give them an alert and turn the switch back off
                     let alert = UIAlertController(title: "Error", message: "Looks like notifications are off. Please turn them on in settings.", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert,animated: true, completion: nil)
                         self.notifSwitch.isOn = false
                     }
-                    
+                    //cancel the current notifs, add em back
                 } else if settings.authorizationStatus == .authorized{
                     UNUserNotificationCenter.current().removeAllDeliveredNotifications()
                     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                     self.addNotifications()
                 }
             })
-            
+            //cancel notifs
         }else{
             UNUserNotificationCenter.current().removeAllDeliveredNotifications()
             UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
@@ -67,6 +69,7 @@ class SettingsTableViewController: UITableViewController {
     var age: Int32 = 25
     var weight: Int32 = 160
     
+    //load user from core data
     func loadUser(){
         let request: NSFetchRequest<UserMO> = UserMO.fetchRequest()
         request.predicate = NSPredicate(format: "%K = %@", argumentArray: [#keyPath(UserMO.user), "user"])
@@ -79,7 +82,7 @@ class SettingsTableViewController: UITableViewController {
         }
     
     }
-    
+    //alert user to privacy info
     @IBAction func showPriv(){
         let alert = UIAlertController(title: "Hi There!", message: "Drip doesn't send any of your information anywhere. It's all stored locally on your phone and never accesed by us.", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Cool, Thanks!", style: .default, handler: nil))
@@ -88,10 +91,13 @@ class SettingsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //get core data
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         managedContext = appDelegate?.persistentContainer.viewContext
-        print(isUserSetup())
+        //let me
+        print("User Setup? \(isUserSetup())")
         let current = UNUserNotificationCenter.current()
+        //if user didn't give us access turn this switch off
         current.getNotificationSettings(completionHandler: {(settings) in
             if settings.authorizationStatus != .authorized{
                 DispatchQueue.main.async{
@@ -99,6 +105,7 @@ class SettingsTableViewController: UITableViewController {
                 }
             }
         })
+        //load user and settings
         loadUser()
         ageLbl.text = "\(user.age)"
         age = user.age
@@ -113,7 +120,7 @@ class SettingsTableViewController: UITableViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+    //update users age on label
     @IBAction func updateAge(){
         let formatter = NumberFormatter()
         formatter.numberStyle = .none
@@ -122,6 +129,7 @@ class SettingsTableViewController: UITableViewController {
 
         ageLbl.text = "\(num!)"
         age = num!
+        //do math to figure out cupnum
         updateCups(age: age, weight: weight)
         //updateCups()
     }
@@ -161,6 +169,7 @@ class SettingsTableViewController: UITableViewController {
             let weightResult = weightRatio * Double(multi)
             var cups  = weightResult / 226.4
             let formatter = NumberFormatter()
+            //rounding into whole numbers
             formatter.numberStyle = .decimal
             formatter.roundingMode = .halfUp
             formatter.maximumFractionDigits = 0
@@ -176,7 +185,7 @@ class SettingsTableViewController: UITableViewController {
     }
     
     func isUserSetup() -> Bool {
-        
+        //if theres any entry in core data, user is set up
         let fetch: NSFetchRequest<UserMO> = UserMO.fetchRequest()
         
         fetch.predicate = NSPredicate(format: "user != nil")
@@ -249,10 +258,11 @@ class SettingsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
-           
+           //only update when user segues out to another page
+            //temporary and will be updated in final release
             let fetch : NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "User")
             
-            
+                //wipe user
             let delete = NSBatchDeleteRequest(fetchRequest: fetch)
             do{
                 try managedContext.execute(delete)
@@ -260,10 +270,11 @@ class SettingsTableViewController: UITableViewController {
             }catch let error as NSError{
                 print("yikes!, \(error)")
             }
+            //reborn out of the ashes, the user returns
             let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
             let newUser = UserMO(entity: entity, insertInto: managedContext)
             newUser.age = age
-        newUser.waterGoal = Int32(Int(cupsLbl.text!)!)
+            newUser.waterGoal = Int32(Int(cupsLbl.text!)!)
             newUser.user = "user"
             newUser.weight = weight
        

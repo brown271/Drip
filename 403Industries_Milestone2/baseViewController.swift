@@ -15,7 +15,7 @@ class baseViewController: UIViewController {
     @IBOutlet var cupGoal:UILabel!
     
     @IBOutlet var inspoText:UILabel!
-    
+    //inpiration to keep the user going
     var inspiration = ["Keep up the good work!","Keep going, almost there!","You got this!","So Close!", "Good job today", "You're killing it!", "I believe in you!", "Lets Drink Some Water!", "Water Time, Drink Up!", "Amazing job!"]
     
     var user: UserMO!
@@ -27,9 +27,12 @@ class baseViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         managedContext = appDelegate?.persistentContainer.viewContext
         super.viewDidLoad()
+        //set a random inspiration
         let rand = Int.random(in: 0..<inspiration.count)
         inspoText.text = inspiration[rand]
+        //load user and all their info
         loadUser()
+        //set our goal to the right amount
         cupGoal.text = "\(user.waterGoal)"
         loadRecord()
         // Do any additional setup after loading the view.
@@ -42,7 +45,7 @@ class baseViewController: UIViewController {
             print(error)
         }
     }
-    
+    //increase by half then save
     @IBAction func inchalf(){
         let inc :NSDecimalNumber = 0.5
         if ((currentDay.currentWater!.doubleValue + 0.5) <= Double(user.waterGoal)){
@@ -59,7 +62,7 @@ class baseViewController: UIViewController {
         }
     }
     
-    
+    //increase by one then save
     @IBAction func incone(){
         let inc :NSDecimalNumber = 1.0
         if ((currentDay.currentWater!.doubleValue + 1.0) <= Double(user.waterGoal)){
@@ -76,7 +79,7 @@ class baseViewController: UIViewController {
         }
     }
     
-    
+    //increase by 2 then save
     @IBAction func inctwo(){
         let inc :NSDecimalNumber = 2.0
         if ((currentDay.currentWater!.doubleValue + 2.0) <= Double(user.waterGoal)){
@@ -96,7 +99,7 @@ class baseViewController: UIViewController {
     @IBAction func Play3(_ sender: Any){
         audioPlayer3.play()
     }
-    
+    //load the user from core data
     func loadUser(){
         let request: NSFetchRequest<UserMO> = UserMO.fetchRequest()
         request.predicate = NSPredicate(format: "%K = %@", argumentArray: [#keyPath(UserMO.user), "user"])
@@ -118,7 +121,7 @@ class baseViewController: UIViewController {
         let count = (try? managedContext.count(for: fetch)) ?? 0
         
         var isCurrentDay = false
-        //records are too long
+        //if its a new day we need new data
         
             print(count)
             do{
@@ -126,15 +129,18 @@ class baseViewController: UIViewController {
                 var oldest = records.first
                 for r in records{
                     print(r.date!)
+                    //find the oldest date
                     if (r.date! < oldest!.date!){
                         oldest = r
                     }
+                    //check if anyday is the same as today
                     if (isSameDay(date1: r.date!, date2: Date.now)){
                         isCurrentDay = true;
                         currentDay = r
                         currentCups.text = "\(r.currentWater!)"
                     }
                 }
+                //if more thna 8 entires, we want to 1
                 if count > 8 {
                 print("deleting oldest record")
                  managedContext.delete(oldest!)

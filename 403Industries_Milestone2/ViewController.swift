@@ -43,10 +43,11 @@ class ViewController: UIViewController {
         
         
         
-       
+       //book our notifications
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound] ){success, error in
             if (success){
                 //notif 1
+                //first wipe our old notifs
                 UNUserNotificationCenter.current().removeAllDeliveredNotifications()
                 UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
                 let notif = UNMutableNotificationContent()
@@ -97,7 +98,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func checkData(){
-    
+    //user wants to go to next page
+        //shouldnt be prompted to enter their goal again
         if (isUserSetup()){
           performSegue(withIdentifier: "skipSetup", sender: nil)
         }
@@ -106,18 +108,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func addData(){
-        print("new data added")
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
-      let newUser = UserMO(entity: entity, insertInto: managedContext)
-        newUser.age = 5
-        newUser.waterGoal = 8
-        newUser.user = "alex"
-        newUser.weight = 5
-            try!  managedContext.save()
-      
-      
-    }
+
     //get started button drip sounds
     @IBAction func Play(_ sender: Any){
         audioPlayer.play()

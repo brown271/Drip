@@ -30,7 +30,7 @@ class alternativesViewController: UIViewController{
 
         // Do any additional setup after loading the view.
         
-        //1. Create URL to apple.com
+        //1. Create URL to lemon wata site
         let myURL = URL(string: "https://www.healthline.com/health/food-nutrition/benefits-of-lemon-water")
         
         //2. Create request to go to this URL

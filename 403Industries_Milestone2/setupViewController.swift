@@ -14,6 +14,7 @@ class setupViewController: UIViewController {
     @IBOutlet var cupDisplay: UILabel!
     
     var managedContext: NSManagedObjectContext!
+    //defauly cup number
     var num: Int32 = 8
     var audioPlayer2 = AVAudioPlayer()
 
@@ -36,6 +37,7 @@ class setupViewController: UIViewController {
     
     
     @IBAction func setGoal(){
+        //create a user with some defualt values
         print("new data added")
         let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
       let newUser = UserMO(entity: entity, insertInto: managedContext)
@@ -44,6 +46,7 @@ class setupViewController: UIViewController {
         newUser.user = "user"
         newUser.weight = 160
             try!  managedContext.save()
+        //segue out to next page
         performSegue(withIdentifier: "setupToMain", sender: nil)
     }
     
@@ -55,6 +58,7 @@ class setupViewController: UIViewController {
         audioPlayer2.play()
     }
     
+    //increase by one and alert user if too many cups
     @IBAction func increase(){
         var canIncrease = true;
        
@@ -71,6 +75,7 @@ class setupViewController: UIViewController {
             self.present(alert,animated: true, completion: nil)
         }
     }
+    //decrease by one and alert user if too many cups
     @IBAction func decrease(){
         var canDecrease = true;
         if (num <= 1){
